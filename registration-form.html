@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Management System - Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="registration-wrapper">
+            <div class="form-header">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    <h1>Financial Manager</h1>
+                </div>
+                <h2>Create Account</h2>
+                <p>Join our financial management platform and take control of your finances</p>
+            </div>
+
+            <form class="registration-form" id="registrationForm" novalidate>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="firstName">First Name *</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="firstName" name="firstName" required 
+                                   placeholder="Enter your first name" minlength="2">
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="lastName">Last Name *</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="lastName" name="lastName" required 
+                                   placeholder="Enter your last name" minlength="2">
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email Address *</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="Enter your email address">
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="phone">Phone Number</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-phone"></i>
+                        <input type="tel" id="phone" name="phone" 
+                               placeholder="Enter your phone number" pattern="[0-9+\-\s\(\)]{10,}">
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="address">Address</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" id="address" name="address" 
+                               placeholder="Enter your address">
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="dateOfBirth">Date of Birth *</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-calendar-alt"></i>
+                            <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="occupation">Occupation</label>
+                        <div class="input-wrapper">
+                            <i class="fas fa-briefcase"></i>
+                            <select id="occupation" name="occupation">
+                                <option value="">Select your occupation</option>
+                                <option value="student">Student</option>
+                                <option value="employed">Employed</option>
+                                <option value="self-employed">Self-Employed</option>
+                                <option value="business-owner">Business Owner</option>
+                                <option value="freelancer">Freelancer</option>
+                                <option value="retired">Retired</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password *</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="password" name="password" required 
+                               placeholder="Create a strong password" minlength="8">
+                        <button type="button" class="password-toggle" onclick="togglePassword('password')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <span class="error-message"></span>
+                    </div>
+                    <!-- Enhanced Password Strength Indicator with Star Rating -->
+                    <div class="password-strength-container">
+                        <div class="password-strength-header">
+                            <span class="strength-label">Password Strength</span>
+                            <div class="star-rating" id="starRating">
+                                <i class="fa fa-star-o" data-rating="1"></i>
+                                <i class="fa fa-star-o" data-rating="2"></i>
+                                <i class="fa fa-star-o" data-rating="3"></i>
+                                <i class="fa fa-star-o" data-rating="4"></i>
+                                <i class="fa fa-star-o" data-rating="5"></i>
+                            </div>
+                        </div>
+                        
+                        <!-- Strength Bar -->
+                        <div class="strength-bar-container">
+                            <div class="strength-bar">
+                                <div class="strength-fill" id="strengthFill"></div>
+                            </div>
+                            <span class="strength-text" id="strengthText">Enter password to check strength</span>
+                        </div>
+                        
+                        <!-- Password Criteria Checklist -->
+                        <div class="password-criteria" id="passwordCriteria">
+                            <div class="criteria-item" data-criteria="length">
+                                <i class="fa fa-check-circle-o"></i>
+                                <span>At least 8 characters</span>
+                            </div>
+                            <div class="criteria-item" data-criteria="lowercase">
+                                <i class="fa fa-check-circle-o"></i>
+                                <span>Contains lowercase letter</span>
+                            </div>
+                            <div class="criteria-item" data-criteria="uppercase">
+                                <i class="fa fa-check-circle-o"></i>
+                                <span>Contains uppercase letter</span>
+                            </div>
+                            <div class="criteria-item" data-criteria="numbers">
+                                <i class="fa fa-check-circle-o"></i>
+                                <span>Contains number</span>
+                            </div>
+                            <div class="criteria-item" data-criteria="symbols">
+                                <i class="fa fa-check-circle-o"></i>
+                                <span>Contains special character</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Password Tips -->
+                        <div class="password-tips" id="passwordTips" style="display: none;">
+                            <i class="fa fa-lightbulb-o"></i>
+                            <span class="tip-text"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required 
+                               placeholder="Confirm your password">
+                        <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+
+                <div class="input-group checkbox-group">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="termsAccepted" name="termsAccepted" required>
+                        <label for="termsAccepted">
+                            I agree to the <a href="#" class="link">Terms of Service</a> and 
+                            <a href="#" class="link">Privacy Policy</a> *
+                        </label>
+                    </div>
+                    <span class="error-message"></span>
+                </div>
+
+                <div class="input-group checkbox-group">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">
+                            I would like to receive financial tips and newsletters
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">Create Account</span>
+                    <i class="fas fa-spinner fa-spin btn-spinner" style="display: none;"></i>
+                </button>
+            </form>
+
+            <div class="form-footer">
+                <p>Already have an account? <a href="#" class="link">Sign in here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            // Password visibility toggle function
+            window.togglePassword = function(inputId) {
+                const $input = $('#' + inputId);
+                const $icon = $input.siblings('.password-toggle').find('i');
+                
+                if ($input.attr('type') === 'password') {
+                    $input.attr('type', 'text');
+                    $icon.removeClass('fa-eye').addClass('fa-eye-slash');
+                } else {
+                    $input.attr('type', 'password');
+                    $icon.removeClass('fa-eye-slash').addClass('fa-eye');
+                }
+            };
+
+            // Enhanced Password Strength Checker with jQuery
+            function checkPasswordStrength(password) {
+                let strength = 0;
+                let score = 0;
+                
+                const criteria = {
+                    length: password.length >= 8,
+                    lowercase: /[a-z]/.test(password),
+                    uppercase: /[A-Z]/.test(password),
+                    numbers: /\d/.test(password),
+                    symbols: /[!@#$%^&*(),.?":{}|<>]/.test(password),
+                    noConsecutive: !/(.)\1{2,}/.test(password), // No 3+ consecutive characters
+                    noCommonPatterns: !/^(123|abc|password|qwer|asdf)/i.test(password),
+                    notPersonalInfo: true // You can add email validation here
+                };
+
+                // Calculate base strength from criteria
+                Object.keys(criteria).forEach(key => {
+                    if (criteria[key]) {
+                        strength++;
+                        score += 20;
+                    }
+                });
+
+                // Bonus points for length
+                if (password.length >= 12) score += 10;
+                if (password.length >= 16) score += 10;
+
+                // Bonus for character variety
+                const uniqueChars = new Set(password).size;
+                if (uniqueChars >= password.length * 0.6) score += 5;
+
+                // Determine star rating (1-5)
+                const starRating = Math.min(5, Math.max(1, Math.ceil(strength * 5 / 7)));
+                
+                return { 
+                    strength, 
+                    criteria, 
+                    score: Math.min(100, score),
+                    starRating 
+                };
+            }
+
+            // Advanced Password Strength Indicator with jQuery
+            $('#password').on('input keyup paste', function() {
+                const password = $(this).val();
+                const result = checkPasswordStrength(password);
+                
+                // Update strength bar and text
+                updateStrengthIndicator(password, result);
+                
+                // Update star rating
+                updateStarRating(result.starRating);
+                
+                // Update criteria checklist
+                updateCriteriaChecklist(result.criteria);
+                
+                // Show password tips
+                showPasswordTips(password, result);
+                
+                // Add animations
+                animateStrengthIndicator(result);
+            }).trigger('input');
+
+            // Update strength indicator
+            function updateStrengthIndicator(password, result) {
+                const $strengthFill = $('#strengthFill');
+                const $strengthText = $('#strengthText');
+                
+                const strengthLevels = {
+                    1: { text: 'Very Weak', color: '#ff4444', bgColor: '#ff4444' },
+                    2: { text: 'Weak', color: '#ff8800', bgColor: '#ff8800' },
+                    3: { text: 'Fair', color: '#ffbb00', bgColor: '#ffbb00' },
+                    4: { text: 'Good', color: '#88ff00', bgColor: '#88ff00' },
+                    5: { text: 'Strong', color: '#00ff88', bgColor: '#00ff88' }
+                };
+
+                if (password.length === 0) {
+                    $strengthFill.css('width', '0%');
+                    $strengthText.text('Enter password to check strength').css('color', '#666');
+                } else {
+                    const level = strengthLevels[result.starRating];
+                    const percentage = (result.score / 100) * 100;
+                    
+                    $strengthFill.css({
+                        'width': percentage + '%',
+                        'background-color': level.bgColor
+                    });
+                    
+                    $strengthText.text(level.text).css('color', level.color);
+                }
+            }
+
+            // Update star rating
+            function updateStarRating(rating) {
+                const $stars = $('#starRating .fa-star-o');
+                
+                $stars.each(function(index) {
+                    const $star = $(this);
+                    if (index < rating) {
+                        $star.removeClass('fa-star-o fa-star')
+                             .addClass('fa-star')
+                             .css('color', '#ffbb00');
+                    } else {
+                        $star.removeClass('fa-star-o fa-star')
+                             .addClass('fa-star-o')
+                             .css('color', '#e5e7eb');
+                    }
+                });
+            }
+
+            // Update criteria checklist
+            function updateCriteriaChecklist(criteria) {
+                $('.criteria-item').each(function() {
+                    const $item = $(this);
+                    const criteriaType = $item.data('criteria');
+                    const $icon = $item.find('[class*="fa-"]');
+                    const $text = $item.find('span');
+                    
+                    if (criteria[criteriaType]) {
+                        $icon.removeClass('fa-check-circle-o fa-times-circle-o')
+                             .addClass('fa-check-circle')
+                             .css('color', '#22c55e');
+                        $item.addClass('criteria-met');
+                    } else {
+                        $icon.removeClass('fa-check-circle-o fa-check-circle')
+                             .addClass('fa-times-circle-o')
+                             .css('color', '#ef4444');
+                        $item.removeClass('criteria-met');
+                    }
+                    
+                    // Add animation
+                    $item.addClass('criteria-animate');
+                    setTimeout(() => $item.removeClass('criteria-animate'), 300);
+                });
+            }
+
+            // Show password tips
+            function showPasswordTips(password, result) {
+                const $tips = $('#passwordTips');
+                const $tipText = $('.tip-text');
+                let tip = '';
+
+                if (password.length > 0 && result.starRating < 4) {
+                    if (!result.criteria.length) tip = 'Use at least 8 characters';
+                    else if (!result.criteria.lowercase) tip = 'Add lowercase letters';
+                    else if (!result.criteria.uppercase) tip = 'Add uppercase letters';
+                    else if (!result.criteria.numbers) tip = 'Include numbers';
+                    else if (!result.criteria.symbols) tip = 'Add special characters (!@#$%^&*)';
+                    else if (!result.criteria.noConsecutive) tip = 'Avoid repeated characters (aaa, 111)';
+                    else tip = 'Make password longer and more random';
+                } else if (result.starRating >= 4) {
+                    tip = 'Excellent password strength!';
+                }
+
+                if (tip) {
+                    $tipText.text(tip);
+                    $tips.fadeIn(300);
+                } else {
+                    $tips.fadeOut(300);
+                }
+            }
+
+            // Animate strength indicator
+            function animateStrengthIndicator(result) {
+                const $container = $('.password-strength-container');
+                
+                $container.addClass('strength-update');
+                setTimeout(() => $container.removeClass('strength-update'), 500);
+                
+                // Pulse effect for strong passwords
+                if (result.starRating >= 4) {
+                    $('#starRating').addClass('star-pulse');
+                    setTimeout(() => $('#starRating').removeClass('star-pulse'), 1000);
+                }
+            }
+
+            // Smooth scrolling for tips
+            function scrollToElement($element) {
+                $('html, body').animate({
+                    scrollTop: $element.offset().top - 100
+                }, 300);
+            }
+
+            // jQuery Form Validation and Submission
+            $('#registrationForm').on('submit', function(e) {
+                e.preventDefault();
+                
+                const $submitBtn = $('#submitBtn');
+                const $btnText = $('.btn-text');
+                const $btnSpinner = $('.btn-spinner');
+                
+                // Clear previous errors
+                $('.error-message').text('');
+                $('.input-group').removeClass('error');
+                
+                let isValid = true;
+                
+                // Custom validation using jQuery
+                const firstName = $('#firstName').val().trim();
+                const lastName = $('#lastName').val().trim();
+                const email = $('#email').val().trim();
+                const password = $('#password').val();
+                const confirmPassword = $('#confirmPassword').val();
+                const dateOfBirth = $('#dateOfBirth').val();
+                const termsAccepted = $('#termsAccepted').is(':checked');
+                
+                // Validate names
+                if (firstName.length < 2) {
+                    showError('firstName', 'First name must be at least 2 characters long');
+                    isValid = false;
+                }
+                
+                if (lastName.length < 2) {
+                    showError('lastName', 'Last name must be at least 2 characters long');
+                    isValid = false;
+                }
+                
+                // Validate email
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    showError('email', 'Please enter a valid email address');
+                    isValid = false;
+                }
+                
+                // Enhanced password validation with strength check
+                const passwordResult = checkPasswordStrength(password);
+                if (password.length < 8) {
+                    showError('password', 'Password must be at least 8 characters long');
+                    isValid = false;
+                } else if (passwordResult.starRating < 3) {
+                    showError('password', 'Password is too weak. Please make it stronger');
+                    isValid = false;
+                }
+                
+                // Validate password confirmation
+                if (password !== confirmPassword) {
+                    showError('confirmPassword', 'Passwords do not match');
+                    isValid = false;
+                }
+                
+                // Validate date of birth
+                if (!dateOfBirth) {
+                    showError('dateOfBirth', 'Please select your date of birth');
+                    isValid = false;
+                } else {
+                    const birthDate = new Date(dateOfBirth);
+                    const today = new Date();
+                    const age = today.getFullYear() - birthDate.getFullYear();
+                    if (age < 18) {
+                        showError('dateOfBirth', 'You must be at least 18 years old to register');
+                        isValid = false;
+                    }
+                }
+                
+                // Validate terms acceptance
+                if (!termsAccepted) {
+                    showError('termsAccepted', 'You must accept the terms of service');
+                    isValid = false;
+                }
+                
+                if (isValid) {
+                    // Show loading state with jQuery animation
+                    $btnText.fadeOut(200, function() {
+                        $btnSpinner.fadeIn(200);
+                    });
+                    
+                    $submitBtn.prop('disabled', true).addClass('loading');
+                    
+                    // Simulate form submission
+                    setTimeout(() => {
+                        alert('Registration successful! Welcome to Financial Manager!\n\nYour password strength: ' + 
+                              passwordResult.starRating + '/5 stars');
+                        
+                        // Reset form with animation
+                        $(this)[0].reset();
+                        $('#passwordCriteria .criteria-item').removeClass('criteria-met');
+                        updateStarRating(0);
+                        $('#passwordTips').hide();
+                        
+                        $btnSpinner.fadeOut(200, function() {
+                            $btnText.fadeIn(200);
+                        });
+                        
+                        $submitBtn.prop('disabled', false).removeClass('loading');
+                    }, 2000);
+                }
+            });
+            
+            // jQuery helper function for showing errors
+            function showError(fieldId, message) {
+                const $field = $('#' + fieldId);
+                const $errorSpan = $field.closest('.input-group').find('.error-message');
+                const $inputGroup = $field.closest('.input-group');
+                
+                $errorSpan.text(message);
+                $inputGroup.addClass('error').addClass('shake');
+                
+                // Remove shake animation after timeout
+                setTimeout(() => $inputGroup.removeClass('shake'), 500);
+            }
+            
+            // Real-time validation with jQuery
+            $('input[required], select[required]').on('blur input', function() {
+                const $field = $(this);
+                const $inputGroup = $field.closest('.input-group');
+                const $errorSpan = $inputGroup.find('.error-message');
+                
+                if ($field.attr('required') && !$field.val().trim()) {
+                    const fieldName = $field.attr('id').replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
+                    showError($field.attr('id'), `${fieldName} is required`);
+                } else {
+                    $errorSpan.text('');
+                    $inputGroup.removeClass('error');
+                }
+            });
+
+            // Password confirmation real-time validation
+            $('#confirmPassword').on('input', function() {
+                const password = $('#password').val();
+                const confirmPassword = $(this).val();
+                const $inputGroup = $(this).closest('.input-group');
+                const $errorSpan = $inputGroup.find('.error-message');
+                
+                if (confirmPassword && password !== confirmPassword) {
+                    showError('confirmPassword', 'Passwords do not match');
+                } else if (confirmPassword && password === confirmPassword) {
+                    $errorSpan.text('');
+                    $inputGroup.removeClass('error').addClass('success');
+                    setTimeout(() => $inputGroup.removeClass('success'), 2000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

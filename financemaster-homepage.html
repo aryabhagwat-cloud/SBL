@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceMaster - AI-Powered Financial Management</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header style="position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid #e2e8f0; padding: 1rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                <i class="fas fa-chart-line" style="font-size: 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"></i>
+                <span style="font-size: 1.25rem; font-weight: 700; color: #1e293b;">FinanceMaster</span>
+            </div>
+            
+            <nav style="display: flex; gap: 2rem;">
+                <a href="#features" style="text-decoration: none; color: #64748b; font-weight: 500;">Features</a>
+                <a href="#dashboard" style="text-decoration: none; color: #64748b; font-weight: 500;">Dashboard</a>
+                <a href="#pricing" style="text-decoration: none; color: #64748b; font-weight: 500;">Pricing</a>
+                <a href="#support" style="text-decoration: none; color: #64748b; font-weight: 500;">Support</a>
+            </nav>
+            
+            <div style="display: flex; gap: 1rem;">
+                <button style="padding: 0.75rem 1.5rem; background: transparent; color: #1e293b; border: 2px solid #e2e8f0; border-radius: 0.5rem; cursor: pointer;">Sign In</button>
+                <button style="padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 0.5rem; cursor: pointer;">Get Started</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section style="padding: 8rem 2rem 4rem; background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); min-height: 100vh; display: flex; align-items: center;">
+        <div style="max-width: 1200px; margin: 0 auto; width: 100%;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-bottom: 4rem;">
+                <div>
+                    <span style="display: inline-flex; padding: 0.5rem 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 9999px; font-size: 0.875rem; margin-bottom: 1.5rem;">🚀 Trusted by 10M+ Users</span>
+                    
+                    <h1 style="font-size: 3.5rem; font-weight: 700; line-height: 1.1; margin-bottom: 1.5rem; color: #1e293b;">
+                        Master Your Finances with
+                        <span style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"> AI-Powered Insights</span>
+                    </h1>
+                    
+                    <p style="font-size: 1.125rem; color: #64748b; line-height: 1.7; margin-bottom: 2rem;">
+                        Transform your financial future with our comprehensive platform. Track expenses, optimize investments, and achieve your financial goals with cutting-edge technology and personalized recommendations.
+                    </p>
+                    
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <button style="padding: 1rem 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 0.5rem; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                            Start Free Trial
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button style="padding: 1rem 2rem; background: transparent; color: #1e293b; border: 2px solid #e2e8f0; border-radius: 0.5rem; font-size: 1.125rem; cursor: pointer; display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-play"></i>
+                            Watch Demo
+                        </button>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: center;">
+                    <div style="background: white; border-radius: 1rem; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); overflow: hidden; max-width: 500px;"> 
+                        <div style="padding: 1.5rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                                <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600;">
+                                    📊 Financial Dashboard
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.875rem; color: #64748b;">
+                                    <div style="width: 8px; height: 8px; border-radius: 50%; background: #10b981;"></div>
+                                    Live Data
+                                </div>
+                            </div>
+                            
+                            <div style="display: grid; gap: 1rem; margin-bottom: 1.5rem;">
+                                <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: #f8fafc; border-radius: 0.75rem;">
+                                    <div style="padding: 0.75rem; border-radius: 0.5rem; color: white; background: #10b981;">
+                                        <i class="fas fa-wallet"></i>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <div style="font-size: 1.25rem; font-weight: 700;">$12,450</div>
+                                        <div style="font-size: 0.875rem; color: #64748b;">Monthly Income</div>
+                                    </div>
+                                    <div style="display: flex; align-items: Center; gap: 0.25rem; font-size: 0.75rem; color: #10b981;">
+                                        <i class="fas fa-arrow-up"></i>
+                                        +12.5%
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: #f8fafc; border-radius: 0.75rem;">
+                                    <div style="padding: 0.75rem; border-radius: 0.5rem; color: white; background: #3b82f6;">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <div style="font-size: 1.25rem; font-weight: 700;">$8,230</div>
+                                        <div style="font-size: 0.875rem; color: #64748b;">Monthly Expenses</div>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; color: #ef4444;">
+                                        <i class="fas fa-arrow-down"></i>
+                                        -5.2%
+                                    </div>
+                                </div>
+                                
+                                <div style="display: flex; align-items: center; gap: 1rem; padding: 1rem; background: #f8fafc; border-radius: 0.75rem;">
+                                    <div Style="padding: 0.75rem; border-radius: 0.5rem; color: white; background: #667eea;">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <div style="flex: 1;">
+                                        <div style="font-size: 1.25rem; font-weight: 700;">$4,220</div>
+                                        <div style="font-size: 0.875rem; color: #64748b;">Total Savings</div>
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 0.25rem; font-size: 0.75rem; color: #10b981;">
+                                        <i class="fas fa-arrow-up"></i>
+                                        +8.7%
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                <div style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+                    <div style="font-size: 1.5rem; color: #667eea;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.5rem; font-weight: 700;">10M+</div>
+                        <div style="font-size: 0.875rem; color: #64748b;">Active Users</div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem; background: white; borderRadius: 1rem; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+                    <div style="font-size: 1.5rem; color: #667eea;">
+                        <i class="fas fa-wallet"></i>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.5rem; font-weight: 700;">$2.5B+</div>
+                        <div style="font-size: 0.875rem; color: #64748b;">Assets Managed</div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+                    <div style="font-size: 1.5rem; color: #667eea;">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.5rem; font-weight: 700;">99.9%</div>
+                        <div style="font-size: 0.875rem; color: #64748b;">Uptime</div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 1rem; padding: 1.5rem; background: white; border-radius: 1rem; box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);">
+                    <div style="font-size: 1.5rem; color: #667eea;">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div>
+                        <div style="font-size: 1.5rem; font-weight: 700;">4.9/5</div>
+                        <div style="font-size: 0.875rem; color: #64748b;">User Rating</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section style="padding: 6rem 2rem; background: white;" id="features">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <span style="display: inline-flex; padding: 0.5rem 1rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 9999px; font-size: 0.875rem; margin-bottom: 1.5rem;">✨ Features</span>
+                <h2 style="font-size: 2.5rem; font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Everything you need to manage your finances</h2>
+                <p style="font-size: 1.125rem; color: #64748b; line-height: 1.7; max-width: 600px; margin: 0 auto;">
+                    Our comprehensive platform combines powerful analytics, intuitive design, and cutting-edge technology to give you complete control over your financial future.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="padding: 2rem; border-radius: 1rem; background: white; border: 2px solid #e2e8f0; transition: all 0.3s ease;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">📊</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Advanced Analytics</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Get deep insights into your financial patterns with AI-powered analytics and predictive modeling.</p>
+                    <ul style="list-style: none;">
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Real-time tracking
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Predictive analytics
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Investment forecasting
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="padding: 2rem; border-radius: 1rem; background: white; border: 2px solid #e2e8f0; transition: all 0.3s ease;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🔒</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Bank-Grade Security</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Your financial data is protected with 256-bit encryption and multi-factor authentication.</p>
+                    <ul style="list-style: none;">
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> End-to-end encryption
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> 2FA Authentication
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Fraud protection
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="padding: 2rem; border-radius: 1rem; background: white; border: 2px solid #e2e8f0; transition: all 0.3s ease;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">📱</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Mobile-First Design</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Access your finances anywhere with our intuitive mobile app designed for modern lifestyles.</p>
+                    <ul style="list-style: none;">
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> iOS & Android apps
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Offline access
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Push notifications
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="padding: 2rem; border-radius: 1rem; background: white; border: 2px solid #e2e8f0; transition: all 0.3s ease;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🤖</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">AI Assistant</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Meet your personal finance assistant powered by advanced AI to guide your financial journey.</p>
+                    <ul style="list-style: none;">
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Smart recommendations
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Automated budgeting
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Voice commands
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="padding: 2rem; border-radius: 1rem; background: white; border: 2px solid #e2e8f0; transition: all 0.3s ease;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">💳</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Transaction Management</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Effortlessly track and categorize every transaction with automatic bank synchronization.</p>
+                    <ul style="list-style: none;">
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Auto-categorization
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Receipt scanning
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span>Smart alerts
+                        </li>
+                    </ul>
+                </div>
+
+                <div style="padding: 2rem; border-radius: 1rem; background: white; border: 2px solid #e2e8f0; transition: all 0.3s ease;">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🐷</div>
+                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">Smart Savings</h3>
+                    <p style="color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">Achieve your savings goals with intelligent budgeting and automatic round-ups.</p>
+                    <ul style="list-style: none;">
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Goal tracking
+                        </li>
+                        <li style="display: flex; align-items: center; gap<｜tool▁sep｜> 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Round-up savings
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: #64748b; font-size: 0.875rem;">
+                            <span>✓</span> Investment plans
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        } 
+    </script>
+</body>
+</html>
